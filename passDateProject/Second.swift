@@ -19,12 +19,14 @@ class Second: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let login = login, let pass = pass else { return }
+        
         view.backgroundColor = colorToSecond
         
         textLbl.adjustsFontSizeToFitWidth = true
         textLbl.numberOfLines = 0
         
-        textLbl.text = "Log: \(login!)\nPass: \(pass!)"
+        textLbl.text = "Log: \(login)\nPass: \(pass)"
     }
     
     
