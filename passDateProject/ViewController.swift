@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 //        if loginTF.text == "red" {
 //            view.backgroundColor = .red
 //        }
-    } 
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let dvc = segue.destination as? Second else { return }
