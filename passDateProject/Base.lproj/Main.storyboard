@@ -98,17 +98,33 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="zij-fk-44r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8m0-xB-PRX">
-                                <rect key="frame" x="169" y="192" width="82.333333333333314" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8m0-xB-PRX">
+                                <rect key="frame" x="168.66666666666666" y="192" width="82.666666666666657" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" systemColor="systemGray5Color"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lS-2K-AbC">
+                                <rect key="frame" x="172" y="717" width="84" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="Fx0-1l-k3X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkPressed:" destination="6Xb-LJ-MWp" eventType="touchUpInside" id="Uue-jb-CrT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9n4-V0-wLc"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8m0-xB-PRX" firstAttribute="top" secondItem="9n4-V0-wLc" secondAttribute="top" constant="148" id="A5M-WD-1On"/>
+                            <constraint firstItem="1lS-2K-AbC" firstAttribute="top" secondItem="9KP-w3-ngN" secondAttribute="bottom" constant="96" id="jgs-bf-ub3"/>
+                            <constraint firstItem="1lS-2K-AbC" firstAttribute="centerX" secondItem="9n4-V0-wLc" secondAttribute="centerX" id="k7w-Sa-rQd"/>
                             <constraint firstItem="9n4-V0-wLc" firstAttribute="bottom" secondItem="9KP-w3-ngN" secondAttribute="bottom" constant="271" id="pbj-Nx-iOu"/>
                             <constraint firstItem="8m0-xB-PRX" firstAttribute="centerX" secondItem="9n4-V0-wLc" secondAttribute="centerX" constant="-4" id="req-ct-bP7"/>
                             <constraint firstItem="9KP-w3-ngN" firstAttribute="centerX" secondItem="9n4-V0-wLc" secondAttribute="centerX" id="u3L-7r-A1x"/>
@@ -118,19 +134,70 @@
                     <navigationItem key="navigationItem" id="PMb-5G-eJy"/>
                     <connections>
                         <outlet property="textLbl" destination="8m0-xB-PRX" id="ceB-11-MdJ"/>
+                        <segue destination="tUa-dX-Fi1" kind="show" identifier="toTheThird" id="eJV-se-zCJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QK-G5-vNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778.03738317757006" y="93.952483801295898"/>
         </scene>
+        <!--Third-->
+        <scene sceneID="GIG-cD-h4P">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tUa-dX-Fi1" customClass="Third" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPT-99-laj">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdA-eq-3KV">
+                                <rect key="frame" x="170" y="436" width="88" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="7" height="8"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTy-c9-MIp">
+                                <rect key="frame" x="183" y="595" width="62" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Again">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="SyY-mN-88J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lnF-j8-vCk"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mdA-eq-3KV" firstAttribute="centerX" secondItem="rPT-99-laj" secondAttribute="centerX" id="K1z-Z1-GWa"/>
+                            <constraint firstItem="zTy-c9-MIp" firstAttribute="top" secondItem="mdA-eq-3KV" secondAttribute="bottom" constant="105" id="N9P-hm-mMr"/>
+                            <constraint firstItem="zTy-c9-MIp" firstAttribute="centerX" secondItem="lnF-j8-vCk" secondAttribute="centerX" id="Rol-Eg-cYA"/>
+                            <constraint firstItem="mdA-eq-3KV" firstAttribute="centerY" secondItem="rPT-99-laj" secondAttribute="centerY" id="Ybr-kR-gCc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y8M-Ss-gh4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcL-U1-v2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1475" y="94"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zij-fk-44r"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
