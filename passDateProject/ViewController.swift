@@ -34,5 +34,9 @@ class ViewController: UIViewController {
         dvc.pass = passwordTF.text
         dvc.colorToSecond = color
     }
+    
+    @IBAction func myWindSegue(segue: UIStoryboardSegue) {
+        
+    }
 }
 
